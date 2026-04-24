@@ -71,3 +71,7 @@ Se abrirá una ventana de escritorio con la aplicación.
 - **Persistencia en sesión**: los datos se mantienen en listas internas durante la ejecución (similar al ejemplo de To-Do List de Flet).
 - **Reactividad**: la interfaz se actualiza automáticamente al agregar o modificar datos usando `page.update()`.
 - **Patrón de vistas**: las tres funcionalidades se manejan como pestañas (`ft.Tabs`) dentro de la aplicación principal.
+
+- ## Aportes
+
+- Israel Perez: Implementación de validaciones para ISBN (mínimo 5 caracteres) y cédula (solo números).
