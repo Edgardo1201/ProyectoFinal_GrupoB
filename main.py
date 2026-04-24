@@ -136,6 +136,9 @@ class BibliotecaApp:
         if not titulo or not autor or not isbn:
             self._mostrar_snack("⚠️ Todos los campos son obligatorios", ft.Colors.ORANGE)
             return
+        if len(isbn) < 5:
+            self._mostrar_snack("⚠️ El ISBN debe tener al menos 5 caracteres", ft.Colors.ORANGE)
+            return
 
         # Validación: ISBN único
         if any(libro.isbn == isbn for libro in self.libros):
@@ -260,6 +263,9 @@ class BibliotecaApp:
 
         if not nombre or not cedula:
             self._mostrar_snack("Nombre y cédula son obligatorios", ft.Colors.ORANGE)
+            return
+        if not cedula.isdigit():
+            self._mostrar_snack("⚠️ La cédula debe contener solo números", ft.Colors.ORANGE)
             return
 
         if any(c.cedula == cedula for c in self.clientes):
